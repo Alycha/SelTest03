@@ -19,8 +19,8 @@ public class DeleteEmail extends TestManager{
         @Test
     public void deleteEmail(){
         InboxPage inbox = mainPage.login().getInboxPage();
-        inbox.sendEmail("alonya.potter@gmail.com", randomBody);
-        assertTrue(inbox.isEmailPresent("alonya.potter@gmail.com"));
+        inbox.sendEmail("alycha.sourceit@gmail.com", randomBody);
+        assertTrue(inbox.isEmailPresent("alycha.sourceit@gmail.com"));
         assertTrue(inbox.isBodyPresent(randomBody));
         inbox.deleteEmail(randomBody);
         assertFalse(inbox.isBodyPresent(randomBody));

@@ -11,7 +11,7 @@ import static conf.TestManager.getDriver;
  * Created by Alycha on 11/10/2015.
  */
 public class LoginPage {
-//alonya.potter
+//alycha.sourceit@gmail.com
     private Button nextButton = new Button(By.id(Locators.LOGIN_NEXT.getValue()));
     private TextInput emailInput = new TextInput(By.id(Locators.LOGIN_EMAIL.getValue()));
 

@@ -6,10 +6,13 @@ package data;
 
 public enum Locators {
     COMPOSE_EMAIL("T-I-KE"),
+    MORE("//span[@class='CJ']"),
+    ALL_EMAIL("//a[@title='All Mail']"),
     SEND_EMAIL("//div[@class='T-I J-J5-Ji aoO T-I-atl L3']"),
-    EMAIL("//span[@email='alonya.potter@gmail.com']"),
+    EMAIL("//span[@email='alycha.sourceit@gmail.com']"),
     REFRESH_INBOX("//div[@class='asf T-I-J3 J-J5-Ji']"),
     DELETE_EMAIL("//div[@class='ar9 T-I-J3 J-J5-Ji']"),
+    ARCHIVE_EMAIL("//div[@class='ar8 T-I-J3 J-J5-Ji']"),
     RECEIVER_INPUT("vO"),
     SUBJECT_INPUT("aoT"),
     BODY_INPUT("//div[@aria-label='Message Body']"),
@@ -22,10 +25,8 @@ public enum Locators {
     PWD_PWD_INPUT("Passwd"),
     PWD_NEXT("signIn"),
     PWD_REMEMBER_ME("PersistentCookie"),
-    PASSWORD("Aly230645"),
-    LOGIN("alonya.potter");
-
-
+    PASSWORD("sourceit888"),
+    LOGIN("alycha.sourceit");
 
 
     private final String value;
