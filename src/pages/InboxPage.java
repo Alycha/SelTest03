@@ -3,6 +3,7 @@ package pages;
 import data.EmailData;
 import data.Locators;
 import elements.Button;
+import elements.Checkbox;
 import elements.TextInput;
 import org.openqa.selenium.By;
 import org.openqa.selenium.UnhandledAlertException;
@@ -25,6 +26,9 @@ public class InboxPage {
     private Button deleteButton = new Button(By.xpath(Locators.DELETE_EMAIL.getValue()));
     private Button bodyButton(String randomBody){
         return new Button(By.xpath("//span[contains(text(),'"+randomBody+"')]"));
+    }
+    private Checkbox emailCheckBox(String randomBody){
+        return new Checkbox(By.xpath("//span[contains(text(),'"+randomBody+"')]/../../../../..//div[@role='checkbox']"));
     }
 
     private TextInput receiverInput = new TextInput(By.className(Locators.RECEIVER_INPUT.getValue()));
@@ -57,7 +61,7 @@ public class InboxPage {
 
 
     public void deleteEmail(String randomBody) {
-      bodyButton(randomBody).click();
+        emailCheckBox(randomBody).check();
         waitInSeconds(1);
         deleteButton.click();
     }
