@@ -3,7 +3,8 @@ package tests;
 import conf.TestManager;
 import org.junit.Test;
 import pages.InboxPage;
-import static org.junit.Assert.assertTrue;
+//import static org.junit.Assert.assertTrue;
+import static conf.TestAsserts.assertTrue;
 import static org.junit.Assert.assertFalse;
 import java.util.Random;
 

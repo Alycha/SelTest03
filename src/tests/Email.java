@@ -4,7 +4,8 @@ import conf.TestManager;
 import org.junit.Test;
 import pages.InboxPage;
 import java.util.Random;
-import static org.junit.Assert.assertTrue;
+//import static org.junit.Assert.assertTrue;
+import static conf.TestAsserts.assertTrue;
 
 /**
  * Created by Alycha on 11/13/2015.
@@ -21,7 +22,7 @@ public class Email extends TestManager {
         inbox.sendEmail("alycha.sourceit@gmail.com", randomBody);
         assertTrue(inbox.isEmailPresent("alycha.sourceit@gmail.com"));
         assertTrue(inbox.isBodyPresent(randomBody));
-        inbox.deleteEmail(randomBody);
+
 
     }
 
