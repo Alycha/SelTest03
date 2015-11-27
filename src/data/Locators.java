@@ -8,6 +8,7 @@ public enum Locators {
     COMPOSE_EMAIL("T-I-KE"),
     MORE("//span[@class='CJ']"),
     ALL_EMAIL("//a[@title='All Mail']"),
+    TRASH("//a[@title='Trash']"),
     SEND_EMAIL("//div[@class='T-I J-J5-Ji aoO T-I-atl L3']"),
     EMAIL("//span[@email='alycha.sourceit@gmail.com']"),
     REFRESH_INBOX("//div[@class='asf T-I-J3 J-J5-Ji']"),

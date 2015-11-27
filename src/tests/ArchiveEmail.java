@@ -23,7 +23,6 @@ public class ArchiveEmail extends TestManager {
         assertTrue(inbox.isEmailPresent("alycha.sourceit@gmail.com"));
         assertTrue(inbox.isBodyPresent(randomBody));
         inbox.archiveEmail(randomBody);
-//        assertFalse(inbox.isBodyPresent(randomBody));
         assertTrue(inbox.isArchived(randomBody));
 
     }

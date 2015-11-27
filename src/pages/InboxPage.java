@@ -27,6 +27,7 @@ public class InboxPage {
     private Button archiveButton = new Button(By.xpath(Locators.ARCHIVE_EMAIL.getValue()));
     private Button moreButton = new Button(By.xpath(Locators.MORE.getValue()));
     private Button allMailButton = new Button(By.xpath(Locators.ALL_EMAIL.getValue()));
+    private Button trashButton = new Button(By.xpath(Locators.TRASH.getValue()));
     private Button bodyButton(String randomBody){
         return new Button(By.xpath("//span[contains(text(),'"+randomBody+"')]"));
     }
@@ -67,6 +68,14 @@ public class InboxPage {
         emailCheckBox(randomBody).check();
         waitInSeconds(1);
         deleteButton.click();
+    }
+
+    public boolean isDeleted(String randomBody) {
+        waitInSeconds(1);
+        moreButton.click();
+        trashButton.click();
+        bodyButton(randomBody).waitForElement();
+        return bodyButton(randomBody).isPresent();
     }
 
     public void archiveEmail(String randomBody) {
